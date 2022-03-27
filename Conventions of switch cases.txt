@@ -1,0 +1,115 @@
+CONVENTIONS FOR SWITCHING RELAYS VIA RESPECTIVE NODEMCUs
+
+101 - BEAM1,LIGHTS,ON  (both lights on)
+100 - BEAM1,LIGHTS,OFF (both lights off)
+111 - BEAM1,FANS,ON    (both fans on)
+110 - BEAM1,FANS,OFF   (both fans off)
+
+201 - BEAM2,LIGHTS,ON  (both lights on)
+200 - BEAM2,LIGHTS,OFF (both lights off)
+211 - BEAM2,FANS,ON    (both fans on)
+210 - BEAM2,FANS,OFF   (both fans off)
+
+301 - BEAM3,LIGHTS,ON  (both lights on)
+300 - BEAM3,LIGHTS,OFF (both lights off)
+311 - BEAM3,FANS,ON    (both fans on)
+310 - BEAM3,FANS,OFF   (both fans off)
+
+401 - BEAM4,LIGHTS,ON  (both lights on)
+400 - BEAM4,LIGHTS,OFF (both lights off)
+411 - BEAM4,FANS,ON    (both fans on)
+410 - BEAM4,FANS,OFF   (both fans off)
+
+
+switch (data) {
+    case 101:    
+      digitalWrite(Relay1,LOW);    //on the light
+      digitalWrite(Relay2,LOW);    //on the light
+      Serial.println("Beam1 lights turned on");
+      break;
+    case 100:    
+      digitalWrite(Relay1,HIGH);  // off the light
+      digitalWrite(Relay2,HIGH);  // off the light
+      Serial.println("Beam1 lights turned on");
+      break;
+    case 111:    
+      digitalWrite(Relay3,LOW);  // on the fan
+      digitalWrite(Relay4,LOW);  // on the fan
+      Serial.println("Beam1 fans turned on");
+      break;
+    case 110:    
+      digitalWrite(Relay3,HIGH);  // off the fan
+      digitalWrite(Relay4,HIGH);  // off the fan
+      Serial.println("Beam1 fans turned off");
+      break;
+  }
+
+
+switch (data) {
+    case 201:    
+      digitalWrite(Relay5,LOW);    //on the light
+      digitalWrite(Relay6,LOW);    //on the light
+      Serial.println("Beam2 lights turned on");
+      break;
+    case 200:    
+      digitalWrite(Relay5,HIGH);  // off the light
+      digitalWrite(Relay6,HIGH);  // off the light
+      Serial.println("Beam2 lights turned on");
+      break;
+    case 211:    
+      digitalWrite(Relay7,LOW);  // on the fan
+      digitalWrite(Relay8,LOW);  // on the fan
+      Serial.println("Beam2 fans turned on");
+      break;
+    case 210:    
+      digitalWrite(Relay7,HIGH);  // off the fan
+      digitalWrite(Relay8,HIGH);  // off the fan
+      Serial.println("Beam2 fans turned off");
+      break;
+  }
+
+switch (data) {
+    case 301:    
+      digitalWrite(Relay9,LOW);    //on the light
+      digitalWrite(Relay10,LOW);    //on the light
+      Serial.println("Beam3 lights turned on");
+      break;
+    case 300:    
+      digitalWrite(Relay9,HIGH);  // off the light
+      digitalWrite(Relay10,HIGH);  // off the light
+      Serial.println("Beam3 lights turned on");
+      break;
+    case 311:    
+      digitalWrite(Relay11,LOW);  // on the fan
+      digitalWrite(Relay12,LOW);  // on the fan
+      Serial.println("Beam3 fans turned on");
+      break;
+    case 310:    
+      digitalWrite(Relay11,HIGH);  // off the fan
+      digitalWrite(Relay12,HIGH);  // off the fan
+      Serial.println("Beam3 fans turned off");
+      break;
+  }
+
+switch (data) {
+    case 401:    
+      digitalWrite(Relay13,LOW);    //on the light
+      digitalWrite(Relay14,LOW);    //on the light
+      Serial.println("Beam4 lights turned on");
+      break;
+    case 400:    
+      digitalWrite(Relay13,HIGH);  // off the light
+      digitalWrite(Relay14,HIGH);  // off the light
+      Serial.println("Beam4 lights turned on");
+      break;
+    case 411:    
+      digitalWrite(Relay15,LOW);  // on the fan
+      digitalWrite(Relay16,LOW);  // on the fan
+      Serial.println("Beam4 fans turned on");
+      break;
+    case 410:    
+      digitalWrite(Relay15,HIGH);  // off the fan
+      digitalWrite(Relay16,HIGH);  // off the fan
+      Serial.println("Beam4 fans turned off");
+      break;
+  }
