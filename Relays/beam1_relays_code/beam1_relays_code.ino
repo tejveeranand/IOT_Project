@@ -63,7 +63,7 @@ void setup() {
   digitalWrite(R3, HIGH); // by default led will be low
   digitalWrite(R4, HIGH); // by default led will be low
   // dht
-  //dht.setup(12, DHTesp::DHT11); // GPIO12(D6)
+  //dht.setup(13, DHTesp::DHT11); // GPIO12(D7)
   //device id 
   //deviceid=ESP.getChipId();
   
